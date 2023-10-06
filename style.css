@@ -97,8 +97,9 @@ header:after {
 }
 
 .userpic {
-	width: 48px;
 	aspect-ratio: 1/1;
+  clip-path: circle();
+	width: 48px;
 }
 
 .links-nextprev {
