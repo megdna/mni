@@ -1,32 +1,40 @@
-/* Defaults */
+/* Global Defaults */
 :root {
-  --mono-font: "Andale Mono", Consolas, Menlo, Monaco, monospace, "Ubuntu Mono";
-  --sans-font: -apple-system, Arial, Avenir, "Avenir Next", BlinkMacSystemFont, Helvetica, "Helvetica Neue", "Nimbus Sans L", "Noto Sans", Roboto, sans-serif, "Segoe UI";
+  --mono-font: "Andale Mono", "Andale Mono WT", "Bitstream Vera Sans Mono",
+    Consolas, Courier, "Courier New", "DejaVu Sans Mono", "Liberation Mono",
+    "Lucida Console", "Lucida Sans Typewriter", Menlo, Monaco, monospace,
+    "Nimbus Mono L", "Ubuntu Mono";
+  --sans-font: -apple-system, Arial, Avenir, "Avenir Next", BlinkMacSystemFont,
+    Helvetica, "Helvetica Neue", "Nimbus Sans L", "Noto Sans", Roboto, sans-serif,
+    "Segoe UI", system-ui;
 }
 
-/* Theme colors */
+/* Theme Colors */
 :root {
-	--bg: #FFFFFF;
-	--text: #001C30;
-	--meta: #003B5E;
-	--link: #0071AF;
-	--link-active: #008FDB;
-	--link-visited: #C6E0FF;
-	--syntax-tab-size: 2;
+  --bg: #FFFFFF;
+  --bg-box: #E8F2FF;
+  --border: #008FDB;
+  --link: #0071AF;
+  --meta: #003B5E;
+  --text: #001C30;
+  --code: #AC5C00;
+  --mark: #ffe53e;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-	--bg: #001C30;
-	--text: #E8F2FF;
-	--meta: #C6E0FF;
-	--link: #008FDB;
-	--link-active: #0071AF;
-	--link-visited: #003B5E;
+    --bg: #001C30;
+    --bg-box: #003B5E;
+    --border: #0071AF;
+    --link: #008FDB;
+    --meta: #C6E0FF;
+    --text: #E8F2FF;
+    --code: #D57300;
+    --mark: #fff9e5;
 	}
 }
 
-/* Global stylesheet */
+/* Stylesheet */
 * {
 	box-sizing: border-box;
 }
@@ -46,69 +54,9 @@ html {
 	overflow-y: scroll;
 }
 
-main {
-	padding: 1rem;
-}
-main * img {
-	max-width: 100%;
-}
-main * img:not(.l) {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-a[href] {
-	color: var(--link);
-}
-a[href]:active,
-a[href]:hover {
-	color: var(--link-active);
-}
-a[href]:visited {
-	color: var(--link-visited);
-}
-
-code,
-pre {
-	font-family: var(--mono-font);
-}
-code {
-	word-break: break-all;
-}
-
-h1 {
-	margin-top: 0;
-}
-
-hr {
-	border: 1px solid var(--meta);
-	margin-block: 20px 20px;
-}
-
-li {
-	line-height: 1.5;
-}
-
-p {
-	line-height: 1.5;
-}
-p:last-child {
-	margin-bottom: 0;
-}
-
-table {
-	margin: 1em 0;
-}
-table td,
-table th {
-	padding-right: 1em;
-}
-
-/* Header */
 header {
 	align-items: center;
-	border-bottom: 1px dashed var(--meta);
+	border-bottom: 1px dashed var(--border);
 	display: flex;
 	flex-wrap: wrap;
 	font-size: 1rem;
@@ -136,7 +84,6 @@ header:after {
 	text-decoration: none;
 }
 
-/* Nav */
 .nav {
 	display: flex;
 	flex: 100%;
@@ -159,35 +106,67 @@ header:after {
 	margin-right: 1em;
 }
 
-/* Markdown Headers */
-.anchor {
-	font-size: 1em;
-	font-style: normal;
-	margin-left: .1em;
-	text-decoration: none;
+main {
+	padding: 1rem;
 }
-a[href].anchor,
-a[href].anchor:visited {
-	color: transparent;
+main :first-child {
+	margin-top: 0;
 }
-a[href].anchor:focus,
-a[href].anchor:hover {
-	text-decoration: underline;
+main * img {
+	max-width: 100%;
 }
-a[href].anchor:focus,
-:hover > a[href].anchor {
-	color: var(--meta);
-}
-h2 + .anchor {
-	font-size: 1.5em;
+main * img:not(.l) {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 footer {
-	border-top: 1px dashed var(--meta);
+	border-top: 1px dashed var(--border);
 	color: var(--meta);
 	font-size: 0.9em;
 	padding: 1em 1.5em;
-}
-footer a {
 	text-decoration: none;
+}
+
+/* Variables */
+a[href] {
+	color: var(--link);
+}
+a[href]:active,
+a[href]:hover,
+a[href]:visited {
+	color: var(--border);
+}
+
+code,
+pre {
+	font-family: var(--mono-font);
+}
+code {
+	word-break: break-all;
+}
+
+hr {
+	border: 1px solid var(--border);
+	margin-block: 20px 20px;
+}
+
+li {
+	line-height: 1.5;
+}
+
+p {
+	line-height: 1.5;
+}
+p:last-child {
+	margin-bottom: 0;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
 }
