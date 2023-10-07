@@ -172,8 +172,11 @@ a[href].anchor:visited {
 }
 a[href].anchor:focus,
 a[href].anchor:hover {
-	color: var(--meta);
 	text-decoration: underline;
+}
+a[href].anchor:focus,
+:hover > a[href].anchor {
+	color: var(--meta);
 }
 h2 + .anchor {
 	font-size: 1.5em;
@@ -183,5 +186,5 @@ footer {
 	border-top: 1px dashed var(--meta);
 	color: var(--meta);
 	font-size: 0.9em;
-	padding: 1em 0;
+	padding: 1em;
 }
