@@ -122,11 +122,14 @@ main * img:not(.l) {
 }
 
 footer {
-	align-content: center;
 	border-top: 1px dashed var(--border);
 	color: var(--meta);
 	font-size: 0.9em;
 	padding: 1em;
+}
+footer a {
+	align-content: center;
+  text-decoration: none;
 }
 
 /* Variables */
