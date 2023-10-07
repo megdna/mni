@@ -80,7 +80,7 @@ header:after {
 	font-weight: 700;
 	margin-right: 2em;
 }
-.home:link:not(:hover) {
+.home a:not(:hover) {
 	text-decoration: none;
 }
 
@@ -95,10 +95,10 @@ header:after {
 .nav-item {
 	display: inline-block;
 }
-.nav-item a[href]:not(:hover) {
+.nav-item a:not(:hover) {
 	text-decoration: none;
 }
-.nav a[href][aria-current="page"] {
+.nav a[aria-current="page"] {
 	font-weight: bold;
 	text-decoration: underline;
 }
@@ -109,7 +109,7 @@ header:after {
 main {
 	padding: 1rem;
 }
-main :first-child {
+main:first-child {
 	margin-top: 0;
 }
 main * img {
@@ -133,12 +133,12 @@ footer a {
 }
 
 /* Variables */
-a[href] {
+a {
 	color: var(--link);
 }
-a[href]:active,
-a[href]:hover,
-a[href]:visited {
+a:active,
+a:hover,
+a:visited {
 	color: var(--border);
 }
 
@@ -155,10 +155,7 @@ hr {
 	margin-block: 20px 20px;
 }
 
-li {
-	line-height: 1.5;
-}
-
+li,
 p {
 	line-height: 1.5;
 }
