@@ -186,6 +186,8 @@ footer {
 	border-top: 1px dashed var(--meta);
 	color: var(--meta);
 	font-size: 0.9em;
-	padding: 1em 2em;
+	padding: 1em 1.5em;
+}
+footer a {
 	text-decoration: none;
 }
