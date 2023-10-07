@@ -155,7 +155,7 @@ header:after {
 	font-weight: bold;
 	text-decoration: underline;
 }
-.nav:not(:last-child) {
+.nav :not(:last-child) {
 	margin-right: 1em;
 }
 
@@ -180,7 +180,6 @@ h2 + .anchor {
 }
 
 footer {
-	align-items: center;
 	border-top: 1px dashed var(--meta);
 	color: var(--meta);
 	font-size: 0.9em;
