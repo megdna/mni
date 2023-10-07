@@ -79,7 +79,7 @@ header:after {
 	font-weight: 700;
 	margin-right: 2em;
 }
-.home a:not(:hover) {
+.home a[href]:not(:hover) {
 	text-decoration: none;
 }
 
