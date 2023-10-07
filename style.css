@@ -72,10 +72,12 @@ header:after {
 .logo {
 	aspect-ratio: 1/1;
   clip-path: circle();
+  float: left;
 	width: 48px;
 }
 
 .home {
+  float: left;
 	font-size: 1em;
 	font-weight: 700;
 	margin-right: 2em;
@@ -87,6 +89,7 @@ header:after {
 .nav {
 	display: flex;
 	flex: 100%;
+	float: right;
 	justify-content: space-evenly;
 	list-style: none;
 	margin: 0;
