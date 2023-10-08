@@ -169,3 +169,14 @@ table td,
 table th {
 	padding-right: 1em;
 }
+
+/* Extras */
+.notice {
+	display: block;
+	background-color: var(--bg-box);
+	color: var(--text);
+	padding: 1em 0.625em;
+}
+.notice ol {
+	margin-top: 0;
+}

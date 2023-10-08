@@ -1,0 +1,350 @@
+/* Global variables */
+:root,
+::backdrop {
+  --mono-font: "Andale Mono", Consolas, Menlo, Monaco, monospace, "Ubuntu Mono";
+  --sans-font: -apple-system, Arial, Avenir, "Avenir Next", BlinkMacSystemFont, Helvetica, "Helvetica Neue", "Nimbus Sans L", "Noto Sans", Roboto, sans-serif, "Segoe UI";
+
+  /* Default (light) theme */
+  --bg: #FFFFFF;
+  --bg-box: #E8F2FF;
+  --border: #008FDB;
+  --link: #0071AF;
+  --meta: #003B5E;
+  --text: #001C30;
+  --code: #AC5C00;
+  --mark: #ffe53e;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root,
+  ::backdrop {
+    color-scheme: dark;
+    --bg: #001C30;
+    --bg-box: #003B5E;
+    --border: #0071AF;
+    --link: #008FDB;
+    --meta: #C6E0FF;
+    --text: #E8F2FF;
+    --code: #D57300;
+    --mark: #fff9e5;
+  }
+  /* Add some transparency to reduce glare in dark mode */
+  img,
+  video {
+    opacity: 0.8;
+  }
+}
+
+html {
+  font-family: var(--sans-font);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;  
+  display: grid;
+  grid-template-columns: 1fr min(45rem, 90%) 1fr;
+}
+body > * {
+  grid-column: 2;
+}
+
+body > header {
+  background-color: var(--bg-box);
+  border-bottom: 2px solid var(--border);
+  padding: 0 0.5rem 0.5rem 0.5rem;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+body > header h1 {
+  margin: 0.5rem auto;
+  max-width: 1200px;
+}
+
+body > header p {
+  font-size: 1.15rem;
+  margin: 0.5rem auto;
+  max-width: 40rem;
+}
+
+header > nav {
+  font-size: 1rem;
+  line-height: 2;
+  padding: 0.5rem 0 0 0;
+}
+
+header > nav a,
+header > nav a:visited {
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  color: var(--text);
+  display: inline-block;
+  margin: 0 0.5rem 1rem 0.5rem;
+  padding: 0.1rem 1rem;
+  text-decoration: none;
+}
+
+header > nav a:hover,
+header > nav a.current,
+header > nav a[aria-current="page"] {
+  border-color: var(--link);
+  color: var(--link);
+  cursor: pointer;
+}
+
+main {
+  padding-top: 0.5rem;
+}
+
+body > footer {
+  border-top: 2px solid var(--border);  
+  color: var(--meta);
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  padding: 1rem 1rem 1.5rem 1rem;
+  text-align: center;
+}
+
+body > footer p {
+  margin: 0.5rem auto;
+}
+
+footer > nav a {
+  padding: 0 0.25rem 0 0.25rem;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3 {
+  line-height: 1.1;
+  margin: 1.5rem 0;
+}
+
+p, h4, h5, h6 {
+  margin: 1rem 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
+
+/* Reduce header size on mobile */
+@media only screen and (max-width: 720px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+  
+  h5 {
+    font-size: 0.8rem;
+  }
+
+  h6 {
+    font-size: 0.7rem;
+  }
+}
+
+a, a:visited {
+  color: var(--link);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+abbr[title] {
+  cursor: help;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+
+hr {
+  background: var(--border);
+  border: none;
+  height: 1px;
+  margin: 1rem auto;
+}
+
+mark {
+  background-color: var(--mark);
+  border-radius: 5px;
+  color: #001C30;
+  padding: 2px 5px;
+}
+
+mark a {
+  color: #0071AF;
+}
+
+/* Special elements */
+article, aside, details, pre {
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+aside, details, pre {
+  background-color: var(--bg-box);
+}
+
+aside {
+  float: right;
+  margin-inline-start: 1rem;
+  width: 30%;
+}
+*[dir="rtl"] aside {
+  float: left;
+}
+
+blockquote {
+  border-inline-start: 0.25rem solid var(--link);
+  margin-inline-start: 1rem;
+  margin-inline-end: 0;
+  margin-block: 1.5rem;
+  padding: 0 0.8rem;
+}
+
+cite {
+  color: var(--meta);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+code, kbd, pre, pre span, samp {
+  color: var(--code);
+  font-family: var(--mono-font);
+}
+
+kbd {
+  border: 1px solid var(--meta);
+  border-bottom: 3px solid var(--meta);
+  border-radius: 5px;
+  color: var(--meta);
+  padding: 0.1rem 0.4rem;
+}
+
+pre {
+  color: var(--meta);
+  max-width: 100%;
+  overflow: auto;
+}
+
+pre code {
+  background: none;
+  color: var(--meta);
+  margin: 0;
+  padding: 0;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin: -0.5rem -1rem;
+  padding: 0.5rem 1rem;
+  word-break: break-all;
+}
+
+details[open] > summary + * {
+  margin-top: 0;
+}
+
+details[open] > summary {
+  margin-bottom: 0.5rem;
+}
+
+details[open] > :last-child {
+  margin-bottom: 0;
+}
+
+img, video {
+  border-radius: 5px;
+  height: auto;
+  max-width: 100%;
+}
+
+figure {
+  display: block;
+  margin: 0;
+  overflow-x: auto;
+}
+
+figcaption {
+  color: var(--meta);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0.5rem 0;
+}
+
+td, th {
+  border: 1px solid var(--border);
+  padding: 0.5rem;
+  text-align: start;
+}
+
+th {
+  background-color: var(--bg-box);
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: var(--bg-box);
+}
+
+table caption {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Classes */
+.notice {
+  background: var(--bg-box);
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  margin: 1.5rem 0;
+  padding: 1rem;
+}

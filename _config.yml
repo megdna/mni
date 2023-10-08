@@ -1,0 +1,27 @@
+# Site Settings
+lang: en
+icon: 🐟
+logo: https://avatars.githubusercontent.com/u/8283950
+url: "https://megdna.github.io"
+baseurl: "/mni"
+permalink: :title
+title: Mní Wičhóni
+description: Water Is Life
+
+# Author Settings
+author: Megan
+email: meg@d8a.org
+github: megdna
+goatcounter: meg
+mastodon: fediscience.org/@meg
+
+nav:
+  - name: About
+    link: /about
+  - name: Blog
+    link: /blog
+  
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap

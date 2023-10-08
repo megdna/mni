@@ -1,0 +1,20 @@
+---
+layout: null
+sitemap: false
+---
+User-agent: *
+Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
+
+User-agent: CCBot
+Disallow: /
+User-agent: ChatGPT-User
+Disallow: /
+User-agent: GPTBot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+User-agent: Google-Extended
+Disallow: /
+User-agent: Omgilibot
+Disallow: /
