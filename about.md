@@ -5,9 +5,9 @@ title: Style Demo
 description: This is a demonstration of some elements in CSS.
 image: assets/images/blue.jpg
 ---
-### Article
+## Article
 
-This is an `article` showing some basic styling. All the typography uses `rem` for sizing. This means that accessibility is maintained for those who change their browser font size.
+This is an `article` showing some basic styling.
 
 <article>
 <h1>Heading 1</h1>
@@ -26,13 +26,12 @@ This is an `article` showing some basic styling. All the typography uses `rem` f
 <p><u>Underlined</u></p>
 <p><a href="https://example.com" target="_blank">URL</a></p>
 <p><abbr title="Uniform Resource Locator">URL</abbr> Abbreviated</p>
-<p><dt>URL</dt> Definition</p>
 <p><mark>Highlighted</mark></p>
 <p><mark>Highlighted <a href="https://example.com" target="_blank">URL</a></mark></p>
 <p>Keyboard: <kbd>Cmd</kbd></p>
 </article>
 
-### Aside
+## Aside
 
 This is an `aside` which floats to the right.
 
@@ -42,7 +41,7 @@ This is an `aside` which floats to the right.
 </aside>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-### Blockquote
+## Blockquote
 
 This is a `blockquote` with a `cite`.
 
@@ -50,7 +49,7 @@ This is a `blockquote` with a `cite`.
 >
 > <cite>Anonymous</cite>
 
-### Code Block
+## Code Block
 
 This can display a block of `code` using `pre`.
 
@@ -66,7 +65,7 @@ body {
 
 <pre>Here is some pre-formatted text that does not wrap.</pre>
 
-### Details/Summary
+## Details/Summary
 
 The `details` of this element are hidden behind a `summary`.
 
@@ -75,15 +74,17 @@ The `details` of this element are hidden behind a `summary`.
   Some text
 </details>
 
-### Lists
+## Lists
 
-* Item
-* Item
-  * Item
-  * Item
-    * Item
-    * Item
+Description:
+<dl>
+  <dt>Item</dt>
+  <dd>Description</dd>
+  <dt>Item</dt>
+  <dd>Description</dd>
+</dl> 
 
+Ordered:
 1. Item
 2. Item
     1. Item
@@ -91,7 +92,15 @@ The `details` of this element are hidden behind a `summary`.
         1. Item
         2. Item
 
-### Media
+Unordered:
+* Item
+* Item
+  * Item
+  * Item
+    * Item
+    * Item
+
+## Media
 
 This is an image inside a `figure` with `figcaption`.
 
@@ -100,7 +109,7 @@ This is an image inside a `figure` with `figcaption`.
   <figcaption>Here is a caption for the photo.</figcaption>
 </figure>
 
-### Table
+## Table
 
 This is a `table` with overflow contained in a `figure`.
 

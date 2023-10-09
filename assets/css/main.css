@@ -35,23 +35,22 @@
 }
 
 /* Stylesheet */
-* {
-	box-sizing: border-box;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-body,
 html {
+	font-family: var(--sans-font);
+	overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body {
 	background-color: var(--bg);
 	color: var(--text);
-	font-family: var(--sans-font);
 	margin: 0 auto;
 	padding: 0;
-}
-body {
 	max-width: 40em;
-}
-html {
-	overflow-y: scroll;
 }
 
 header {
@@ -76,33 +75,36 @@ header:after {
 }
 
 .home {
+	font-size: 1em;
 	font-weight: 700;
 	margin-right: 2em;
 }
-.home a[href]:not(:hover) {
+.home:link:not(:hover) {
 	text-decoration: none;
 }
 
 .nav {
-	display: flex;
 	flex: 100%;
 	justify-content: space-evenly;
-	list-style: none;
-	margin: 0;
+	display: flex;
 	padding: 0;
+	margin: 0;
+	list-style: none;
 }
+
 .nav-item {
 	display: inline-block;
 }
-.nav-item a:not(:hover) {
-	text-decoration: none;
-}
-.nav a[aria-current="page"] {
-	font-weight: bold;
-	text-decoration: underline;
-}
+
 .nav :not(:last-child) {
 	margin-right: 1em;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+	font-weight: bold;
 }
 
 main {
@@ -127,7 +129,7 @@ footer {
 	padding: 1em;
 }
 footer a {
-	align-content: center;
+	text-align: center;
   text-decoration: none;
 }
 
@@ -139,6 +141,7 @@ a:active,
 a:hover,
 a:visited {
 	color: var(--border);
+  text-decoration: none;
 }
 
 code,
@@ -152,6 +155,10 @@ code {
 hr {
 	border: 1px solid var(--border);
 	margin-block: 20px 20px;
+}
+
+h1 {
+	margin-top: 0;
 }
 
 li,
@@ -175,7 +182,7 @@ table th {
 	display: block;
 	background-color: var(--bg-box);
 	color: var(--text);
-	padding: 1em 0.625em;
+	padding: 1em;
 }
 .notice ol {
 	margin-top: 0;

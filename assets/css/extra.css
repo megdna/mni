@@ -1,49 +1,5 @@
-/* Global variables */
-:root,
-::backdrop {
-  --mono-font: "Andale Mono", Consolas, Menlo, Monaco, monospace, "Ubuntu Mono";
-  --sans-font: -apple-system, Arial, Avenir, "Avenir Next", BlinkMacSystemFont, Helvetica, "Helvetica Neue", "Nimbus Sans L", "Noto Sans", Roboto, sans-serif, "Segoe UI";
-
-  /* Default (light) theme */
-  --bg: #FFFFFF;
-  --bg-box: #E8F2FF;
-  --border: #008FDB;
-  --link: #0071AF;
-  --meta: #003B5E;
-  --text: #001C30;
-  --code: #AC5C00;
-  --mark: #ffe53e;
-}
-
-/* Dark theme */
-@media (prefers-color-scheme: dark) {
-  :root,
-  ::backdrop {
-    color-scheme: dark;
-    --bg: #001C30;
-    --bg-box: #003B5E;
-    --border: #0071AF;
-    --link: #008FDB;
-    --meta: #C6E0FF;
-    --text: #E8F2FF;
-    --code: #D57300;
-    --mark: #fff9e5;
-  }
-  /* Add some transparency to reduce glare in dark mode */
-  img,
-  video {
-    opacity: 0.8;
-  }
-}
-
-html {
-  font-family: var(--sans-font);
-  scroll-behavior: smooth;
-}
-
+/* General */
 body {
-  background-color: var(--bg);
-  color: var(--text);
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;  
