@@ -109,9 +109,6 @@ header:after {
 main {
 	padding: 1rem;
 }
-main:first-child {
-	margin-top: 0;
-}
 
 footer {
 	border-top: 1px dashed var(--border);
@@ -149,10 +146,6 @@ abbr[title] {
   cursor: help;
 }
 
-dd {
-    color: var(--meta);
-}
-
 hr {
 	border: 1px solid var(--border);
   margin: 1rem auto;
@@ -177,10 +170,6 @@ article, aside, details, pre {
   padding: 0.5rem 1rem;
 }
 
-article:first-child {
-	margin-top: 0;
-}
-
 aside, details, pre {
   background-color: var(--bg-box);
 }
@@ -202,7 +191,7 @@ blockquote {
   padding: 0 0.8rem;
 }
 
-cite {
+cite, dd {
   color: var(--meta);
   font-size: 0.9rem;
 }
