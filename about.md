@@ -2,7 +2,7 @@
 layout: post
 permalink: /about
 title: Style Demo
-description: This is a demonstration of some elements in CSS.
+description: This is a demonstration of the elements in CSS.
 image: assets/images/blue.jpg
 ---
 ## Article
