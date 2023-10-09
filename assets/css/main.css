@@ -86,6 +86,7 @@ header:after {
 
 .nav {
 	display: flex;
+  float: right;
 	flex: 100%;
 	justify-content: space-evenly;
 	list-style: none;
