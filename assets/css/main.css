@@ -84,27 +84,25 @@ header:after {
 }
 
 .nav {
+	display: flex;
 	flex: 100%;
 	justify-content: space-evenly;
-	display: flex;
-	padding: 0;
-	margin: 0;
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
-
 .nav-item {
 	display: inline-block;
-}
-
-.nav :not(:last-child) {
-	margin-right: 1em;
 }
 .nav-item a[href]:not(:hover) {
 	text-decoration: none;
 }
-.nav a[href][aria-current="page"] {
-	text-decoration: underline;
+.nav-item a[href][aria-current="page"] {
 	font-weight: bold;
+	text-decoration: underline;
+}
+.nav :not(:last-child) {
+	margin-right: 1em;
 }
 
 main {
@@ -113,23 +111,15 @@ main {
 main:first-child {
 	margin-top: 0;
 }
-main * img {
-	max-width: 100%;
-}
-main * img:not(.l) {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
 
 footer {
 	border-top: 1px dashed var(--border);
 	color: var(--meta);
 	font-size: 0.9em;
 	padding: 1em;
+  text-align: center;
 }
 footer a {
-	text-align: center;
   text-decoration: none;
 }
 
@@ -144,21 +134,21 @@ a:visited {
   text-decoration: none;
 }
 
-code,
-pre {
-	font-family: var(--mono-font);
+abbr[title] {
+  cursor: help;
 }
-code {
-	word-break: break-all;
+
+dt {
+    color: var(--meta);
+}
+
+h1 {
+	margin-top: 0;
 }
 
 hr {
 	border: 1px solid var(--border);
 	margin-block: 20px 20px;
-}
-
-h1 {
-	margin-top: 0;
 }
 
 li,
@@ -169,21 +159,137 @@ p:last-child {
 	margin-bottom: 0;
 }
 
-table {
-	margin: 1em 0;
+mark {
+  background-color: var(--mark);
+  border-radius: 5px;
+  color: #001C30;
+  padding: 2px 5px;
 }
-table td,
-table th {
-	padding-right: 1em;
+mark a {
+  color: #0071AF;
 }
 
-/* Extras */
-.notice {
-	display: block;
-	background-color: var(--bg-box);
-	color: var(--text);
-	padding: 1em;
+/* Special elements */
+article, aside, details, pre {
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
 }
-.notice ol {
-	margin-top: 0;
+
+aside, details, pre {
+  background-color: var(--bg-box);
+}
+
+aside {
+  float: right;
+  margin-inline-start: 1rem;
+  width: 30%;
+}
+*[dir="rtl"] aside {
+  float: left;
+}
+
+blockquote {
+  border-inline-start: 0.25rem solid var(--link);
+  margin-inline-start: 1rem;
+  margin-inline-end: 0;
+  margin-block: 1.5rem;
+  padding: 0 0.8rem;
+}
+
+cite {
+  color: var(--meta);
+  font-size: 0.9rem;
+}
+
+code, kbd, pre, pre span, samp {
+  color: var(--code);
+  font-family: var(--mono-font);
+}
+
+kbd {
+  border: 1px solid var(--meta);
+  border-bottom: 3px solid var(--meta);
+  border-radius: 5px;
+  color: var(--meta);
+  padding: 0.1rem 0.4rem;
+}
+
+pre {
+  color: var(--meta);
+  max-width: 100%;
+  overflow: auto;
+}
+
+pre code {
+  background: none;
+  color: var(--meta);
+  margin: 0;
+  padding: 0;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin: -0.5rem -1rem;
+  padding: 0.5rem 1rem;
+  word-break: break-all;
+}
+details[open] > summary + * {
+  margin-top: 0;
+}
+details[open] > summary {
+  margin-bottom: 0.5rem;
+}
+details[open] > :last-child {
+  margin-bottom: 0;
+}
+
+img, video {
+  border-radius: 5px;
+  height: auto;
+  max-width: 100%;
+}
+
+figure {
+  display: block;
+  margin: 0;
+  overflow-x: auto;
+}
+figcaption {
+  color: var(--meta);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0.5rem 0;
+}
+td, th {
+  border: 1px solid var(--border);
+  padding: 0.5rem;
+  text-align: start;
+}
+th {
+  background-color: var(--bg-box);
+  font-weight: bold;
+}
+tr:nth-child(even) {
+  background-color: var(--bg-box);
+}
+table caption {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Classes */
+.notice {
+  background: var(--bg-box);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  margin: 1.5rem 0;
+  padding: 1rem;
 }

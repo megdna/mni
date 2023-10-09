@@ -76,7 +76,7 @@ The `details` of this element are hidden behind a `summary`.
 
 ## Lists
 
-Description:
+<p><u>Description</u></p>
 <dl>
   <dt>Item</dt>
   <dd>Description</dd>
@@ -84,7 +84,7 @@ Description:
   <dd>Description</dd>
 </dl> 
 
-Ordered:
+<p><u>Ordered</u></p>
 1. Item
 2. Item
     1. Item
@@ -92,7 +92,7 @@ Ordered:
         1. Item
         2. Item
 
-Unordered:
+<p><u>Unordered</u></p>
 * Item
 * Item
   * Item
