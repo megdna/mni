@@ -138,7 +138,7 @@ abbr[title] {
   cursor: help;
 }
 
-dt {
+dd {
     color: var(--meta);
 }
 
@@ -154,9 +154,6 @@ hr {
 li,
 p {
 	line-height: 1.5;
-}
-p:last-child {
-	margin-bottom: 0;
 }
 
 mark {
@@ -175,6 +172,10 @@ article, aside, details, pre {
   border-radius: 5px;
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
+}
+
+article:first-child {
+	margin-top: 0;
 }
 
 aside, details, pre {
