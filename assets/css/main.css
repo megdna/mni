@@ -86,7 +86,6 @@ header:after {
 
 .nav {
 	display: flex;
-  float: right;
 	flex: 100%;
 	justify-content: space-evenly;
 	list-style: none;
@@ -95,6 +94,7 @@ header:after {
 }
 .nav-item {
 	display: inline-block;
+  float: right;
 }
 .nav-item a[href]:not(:hover) {
 	text-decoration: none;
