@@ -92,17 +92,25 @@ header:after {
 	margin: 0;
 	padding: 0;
 }
+
 .nav-item {
 	display: inline-block;
-  float: right;
 }
+
+.nav-item a[href] {
+  float: right;
+	text-decoration: none;
+}
+
 .nav-item a[href]:not(:hover) {
 	text-decoration: none;
 }
+
 .nav-item a[href][aria-current="page"] {
 	font-weight: bold;
 	text-decoration: underline;
 }
+
 .nav :not(:last-child) {
 	margin-right: 1em;
 }
